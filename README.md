@@ -29,10 +29,3 @@ It processes, queues, and analyzes Tarifit text in real time using Python and sp
 ## Author
 
 Built by [@jamalinu](https://github.com/jamalinu)
-```
-
----
-
-Copia, pega, y haz commit con el mensaje:
-```
-Add README
