@@ -4,42 +4,48 @@
 
 ## What is Tawalt?
 
-Tawalt is the first conversational NLP pipeline built natively for Tarifit Berber.
-It processes, queues, and analyzes Tarifit text in real time using Python and spaCy.
+Tawalt — Low-Resource NLP Infrastructure for the Maghreb
+Bridging the gap for Tamazight & Maghrebi varieties. A specialized pipeline for languages with high conversational presence but zero native AI support.
 
-## Projects
+🚀 Overview
+Tawalt is a modular NLP infrastructure built to handle the unique linguistic challenges of Tarifit, Tashelhit, and Darija. Unlike generic models, Tawalt focuses on the "messy" reality of low-resource languages: orthographic inconsistency, code-switching, and phonetic depth.
 
-### 1. Tawalt Chat
-The first chatbot that understands and responds in Tarifit Berber.
+📂 Core Projects
+1. Tawalt Chatbot (Hugging Face)
+An experimental conversational interface to evaluate LLM zero-shot capabilities in Tamazight.
 
-- Message queue architecture (FIFO)
-- Tarifit vocabulary and grammar rules
-- Automatic typo correction with rapidfuzz
-- Intent detection (greetings, questions, farewells)
-- Persistent conversation history (JSON)
+Code-switching Resilience: Analyzes mixed-language inputs (Tamazight/French/Arabic).
 
-👉 [Try it live](https://huggingface.co/spaces/jamalinu/tawalt)
+Intent Mapping: Specialized detection for CX (Customer Experience) support flows.
 
-### 2. Tarifit TTS Linguistic Frontend
-A text normalization pipeline that prepares Tarifit text for Text-to-Speech synthesis.
+Robustness: Integrated with rapidfuzz to handle non-standardized spelling.
 
-- Converts informal Chat-Arabic numerals (7→ħ, 9→q, 3→ʕ)
-- Maps digraphs to phonetic symbols (th→θ, gh→ɣ, kh→x)
-- Detects and marks geminate consonants (ll→lː, rr→rː)
-- Protects Amazigh pronouns during normalization
-- Generates CSV metadata datasets for TTS training
+2. Tarifit TTS Linguistic Frontend
+A high-precision normalization pipeline designed to bridge the gap between informal text and acoustic models.
 
-## Tech Stack
+Expressive Normalization: Smart de-lengthening (reduces "azuuuul" to "azul") while preserving phonemic gemination (essential for natural prosody).
 
-- Python 3
-- spaCy 3.8
-- rapidfuzz
-- phonemizer
-- Google Colab
+Phonetic Mapping: Converts "Chat-Arabic" numerals (7, 9, 3) and digraphs into a standardized phonemic layer.
 
-## Status
+Grammar-Aware: Protects clitics and pronouns during the normalization process to ensure morphological integrity.
 
-`v0.2 — Active development`
+Dataset Ready: Automatically generates CSV metadata aligned with LJSpeech standards.
+
+3. Social Sentiment Analyzer
+Advanced sentiment classification for low-resource social media data.
+
+Noise Reduction: Specialized preprocessing for noisy Twitter/X datasets in Maghrebi dialects.
+
+Emotion Detection: Differentiates between dialectal markers of intent and sentiment.
+
+🛠️ Tech Stack & Methodology
+Linguistic Engine: Python 3.10+ | spaCy 3.8
+
+Normalization: RegEx-based phonemic mapping & Morphological protection.
+
+Deployment: Hugging Face Spaces | Gradio.
+
+Standards: Following AI4D (AI for Development) principles for responsible and inclusive AI.
 
 ## Author
 
